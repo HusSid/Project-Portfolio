@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Self-Driving Car</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Self-driving car</a>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+                        <section class="post">
+                            <!-- Image -->
+                            <h2>Deep Learning</h2>
+							<p>A convolutional neural network was trained to drive a car simulator.</p>
+							<p>The training phase involved manually driving the car along the track and keeping records of the visuals along with the angle, throttle and speed of the car which were then input into the model.</p>
+							<div class="box alt">
+                                <div class="row gtr-50 gtr-uniform">
+                                    <div class="col-6"><span class="image fit"><img src="images/10mph0.21MPFantLooped.gif" alt="" /></span></div>
+                                    <div class="col-6"><span class="image fit"><img src="images/1Lap0.19MPFantLooped1RemovedAfter3.gif" alt="" /></span></div>
+                                </div>
+                            </div>
+							<p>Initially, the model was trained with low resolution images and only one lap around the track, barely making it around the first bend (left GIF).</p>
+							
+							Improvements were carried out incrementally:
+							<ol>
+								<li>By <b>increasing training duration</b> via epochs and steps but this showed limited results as the car became confused once it reached the bridge and the road markings had disappeared.</li>
+								<li>Training the model with <b>more laps around the track</b> seemed promising but encountered the same problem along the bridge.</li>
+								<li><b>Increasing image resolution</b> was the last step to train the network sufficiently so that it could drive around the track with minimal issues (right GIF).</li>
+							</ol>
+                            
+                            <!-- Text stuff -->
+                                
+                            
+
+                            <!-- Lists -->
+                            <h2>Resources</h2>
+                            <div class="row">
+                                <div class="col-6 col-12-small">
+                                    <ul>
+                                        <li>Python</li>
+										<li>TensorFlow Library</li>
+                                        <li>Unity</li>
+                                    </ul>
+
+                                </div>
+                            
+                            </div>
+                        </section>
+					</div>
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Hussain Siddiquey</li><li>Project Portfolio</li><li>Original Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>3D Scanner</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">3D Scanner</a>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+
+								<!-- Text stuff -->
+									<h2>Structured Light Scanner</h2>
+									<p>A scanner was designed and built to create CAD models of engine components for Imperial College London's Dynamics Group, consisting of a turntable to rotate the objects 360° and a projector and camera for scanning.</p>
+									<!-- Image -->
+									<div class="box alt">
+										<div style="text-align:center;" class="row gtr-50 gtr-uniform">
+											<div class="col-12"><span class="image featured"><img width="700" src="images/scannerassembly.png" alt="" /></span></div>
+										</div>
+
+                                    <p><a href="https://www.researchgate.net/publication/220720451_Build_your_own_3D_scanner_Optical_triangulation_for_beginners">Structured light</a> was the chosen scanning method, which projects a series of patterns onto the object and by measuring the depth profile, generates point cloud data for the 3D mesh.</p>
+									
+									<div class="box alt">
+										<div style="text-align:center;" class="row gtr-50 gtr-uniform">
+											<div class="col-12"><span class="image featured"><img width="650" src="images/carscan.gif" alt="" /></span></div>
+                                        </div>
+                                    </div>  
+
+                                    <p>Initial models were of low quality so to improve, a higher resolution projector and camera were used to acheive higher density point clouds.</p>
+
+                                   
+									<div class="box alt">
+										<div style="text-align:center;" class="row gtr-50 gtr-uniform">
+											<div class="col-6"><span class="image featured"><img width="500" src="images/car3MP2.png" alt="" /></span></div>
+                                            <div class="col-6"><span class="image featured"><img width="500" src="images/car10MP2.png" alt="" /></span></div>
+                                           
+										</div>
+									</div>
+
+                                    <p>Scanning shiny objects was difficult due to surface reflections so a possible solution was to coat the surface for a matte finish, resulting in a higher density point cloud and better 3D model.</p>
+                                    <div class="box alt">
+										<div style="text-align:center;" class="row gtr-50 gtr-uniform">
+											<div class="col-6"><span class="image featured"><img width="500" src="images/shinyblade2labelled.png" alt="" /></span></div>
+                                            <div class="col-6"><span class="image featured"><img width="500" src="images/coatedbladelabelled.png" alt="" /></span></div>
+										</div>
+									</div>
+
+									<p>The final design could not be tested due to Covid-19 but evaluation of the prototype showed that 3D models could be accurate to within 0.5mm.</p>
+									
+									<div class="box alt">
+										<div style="text-align:center;" class="row gtr-50 gtr-uniform">
+											<div class="col-12"><span class="image featured"><img width="750" src="images/scanhistogram.png" alt="" /></span></div>
+										</div>
+									</div>
+
+									
+                                    <!-- Lists -->
+									<h2>Resources</h2>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<ul>
+                                                <li>MATLAB</li>
+												<li>Python</li>
+                                                <li>Arduino</li>
+                                                <li>OpenCV Library</li>
+											</ul>
+
+										</div>
+									
+									</div>
+					</div>
+				</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Hussain Siddiquey</li><li>Project Portfolio</li><li>Original Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

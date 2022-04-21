@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Pedestrian & Car Tracker</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Pedestrian & Car Tracker</a>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+                        <section class="post">
+							<h2>Computer Vision</h2>
+							
+                            <!-- Text stuff -->
+							
+                            <p>To track pedestrians and cars, certain visual features can be identified which distinguish them from their surroundings. Using a pre-trained classifier for <a href="https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_fullbody.xml">pedestrians</a> and <a href="https://raw.githubusercontent.com/andrewssobral/vehicle_detection_haarcascades/master/cars.xml">cars</a>, they can both be detected in real-time from a <a href = 'https://www.youtube.com/watch?v=WriuvU1rXkc&t=0s'>video feed</a>.</p>
+							
+                            <!-- Image -->
+                            
+                            <div class="box alt">
+                                <div style="text-align: center;" class="row gtr-50 gtr-uniform">
+                                    <div class="col-12"><span class="image featured"><a href="https://www.youtube.com/watch?v=WriuvU1rXkc&t=0s"><img width="850" src="images/pedestrianTracker.gif" alt="" /></a></span></div>
+                                </div>
+                            </div>
+
+							The algorithm could successfully highlight pedestrians in red and cars in green but its accuracy was limited by:
+							<ul>
+								<li>The classifier, which struggles to identify every subject due to <b>inherent limitations of the model.</b></li>
+								<li>Visual limitations such as <b>lighting and image resolution.</b></li>
+							</ul> 
+
+
+                            <!-- Lists -->
+                            <h2>Resources</h2>
+                            <div class="row">
+                                <div class="col-6 col-12-small">
+                                    <ul>
+                                        <li>Python</li>
+										<li>OpenCV Library</li>
+                                    </ul>
+
+                                </div>
+                            
+                            </div>
+                        </section>
+					</div>
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Hussain Siddiquey</li><li>Project Portfolio</li><li>Original Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

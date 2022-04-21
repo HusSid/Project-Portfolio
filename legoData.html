@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>LEGO Set Releases</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">LEGO Releases</a>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+                        <section class="post">
+                            <h2>Lego Sets Analysis</h2>
+                            <p>Analysis was carried out on <a href="https://github.com/KeithGalli/lego-analysis/tree/master/datasets">yearly set releases</a> by LEGO since 1950 with three questions in mind:</p>
+                            <h3>1. How many unique sets were released per year?</h3> 
+                            <ul>
+								<li>Each unique set has its own set number so the data was filtered according to both year and set number.</li>
+								<li>The results show a large increase in sales from 2000, which is likely related to the increased production of sci-fi and animated movies during this time period.</li>
+							</ul>
+
+                            <div class="box alt">
+                                <div style="text-align: center;" class="row gtr-50 gtr-uniform">
+                                    <div class="col-12"><span class="image featured"><img width="800" src="images/setsperyear.png" alt="" /></span></div>
+                                </div>
+                            </div>
+							<h3>2. Of all licenced sets released, how many were Star Wars themed?</h3>
+							<ul>
+								<li>To answer this, two datasets had to be merged via an inner join based on the column common to both: 'parent_theme'.</li>
+								<li>The data was then grouped and counted based on whether the sets were licenced or not, showing that <b>51% of all licenced sets were Stars Wars themed.</b></li>
+								<li>Clearly, Star Wars dominates the overall market for LEGO sets which is important to consider for marketing.</li>
+							</ul>
+
+							<h3>3. What were the most popular licenced sets of each year?</h3>
+                            <ul>
+								<li>Grouping the data by year then filtering by theme allows us to see that every year, <b>Stars Wars sets were the most popular</b> LEGO sets sold <b>except for 2017, when Super Hero sets overtook them.</b></li>
+								<li>This could indicate a shift in interest by the target market so it may be wise to consider shifting manufacturing and advertisements to be more in-line with current trends.</li>
+							</ul>
+                            <div class="box alt">
+                                <div style="text-align: center;" class="row gtr-50 gtr-uniform">
+                                    <div class="col-12"><span class="image featured"><img width="800" src="images/setsperyear3.png" alt="" /></span></div>
+                                </div>
+                            </div>
+
+                            <!-- Lists -->
+                            <h2>Resources</h2>
+                            <div class="row">
+                                <div class="col-6 col-12-small">
+                                    <ul>
+										<li>Python</li>
+                                        <li>Pandas Library</li>
+                                        <li>Jupyter Notebook</li>
+                                    </ul>
+
+                                </div>
+                            
+                            </div>
+                        </section>
+					</div>
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Hussain Siddiquey</li><li>Project Portfolio</li><li>Original Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
