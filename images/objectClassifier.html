@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Object Classifier</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Deep Learning</a>
+					</header>
+
+				<!-- Nav -->
+					<!-- <nav id="nav">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav> -->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+                        <section class="post">
+                            <!-- Image -->
+                            <h2>Object Classifier</h2>
+                             <!-- Text stuff -->
+                            <!-- <p>A neural network was trained to classify images based on the labels 'T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag' and 'Ankle boot' and <a href="https://keras.io/api/datasets/fashion_mnist/#fashion-mnist-dataset-an-alternative-to-mnist">60,000 images</a>.</p> -->
+                            <p>A neural network was trained to classify items of clothing given 60,000 labelled images and ten clothing categories from the <a href="https://keras.io/api/datasets/fashion_mnist/#fashion-mnist-dataset-an-alternative-to-mnist">Fashion MNIST dataset</a> of the Keras library.</p>
+                            
+							<!-- <div class="box alt">
+                                <div class="row gtr-50 gtr-uniform">
+                                    <div class="col-12"><span class="image fit"><img src="images/epochs2.gif" alt="" /></span></div>
+                                </div>
+                            </div> -->
+
+							<!-- <p>The model had an overall accuracy of 88% which proved sufficient to predict the items below.</p> -->
+							
+							<p>The model had 784 input neurons (one for each pixel of the 28x28 input image), 128 hidden neurons and 10 output neurons (one for each label) with an overall accuracy of 88%, which was sufficient to predict the items below.</p>
+                            <!-- <div class="box alt">
+                                <div style="text-align: center;" class="row gtr-50 gtr-uniform">
+                                    <div class="col-12"><span class="image featured"><img width="600" src="images/CLOTHING 11.png" alt="" /></span></div>
+                                </div>
+                            </div> -->
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4"><span class="image fit"><img src="images/FashionMNIST1.png" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/FashionMNIST2.png" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/FashionMNIST3.png" alt="" /></span></div>
+								</div>
+							</div>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4"><span class="image fit"><img src="images/FashionMNIST15.png" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/FashionMNIST14.png" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/FashionMNIST12.png" alt="" /></span></div>
+								</div>
+							</div>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4"><span class="image fit"><img src="images/FashionMNIST7.png" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/FashionMNIST6.png" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/FashionMNIST8.png" alt="" /></span></div>
+								</div>
+							</div>
+							<!-- <p>In some cases, the neural network incorrectly labelled the image (shown below) which is unsurprising given the simplicity of the model. To improve, convolutional layers and more hidden layers could be used to extract features that help the model better distinguish between different categories.</p> -->
+							<!-- <p>In some cases, the neural network incorrectly labelled the image (shown below) which is unsurprising given the simplicity of the model. To improve, adding convolutional layers and extra hidden layers could extract features more precisely and help the model better distinguish between different categories.</p> -->
+							<p>In some cases, the neural network incorrectly labelled the image (shown below) which is unsurprising given the simplicity of the model. To improve, adding convolutional layers and extra hidden layers could extract more precise features that help the model better distinguish between different categories.</p>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-6"><span class="image fit"><img src="images/FashionMNIST13.png" alt="" /></span></div>
+									<div class="col-6"><span class="image fit"><img src="images/FashionMNIST18.png" alt="" /></span></div>
+								</div>
+							</div>
+							<h2>Object Detection</h2>
+							<p>The pre-trained <a href="https://pjreddie.com/darknet/yolo/">YOLOv3</a> convolutional neural network was used to accurately detect and label objects from the <a href="https://cocodataset.org/#home">Microsoft COCO dataset</a>, as shown in the images below.</p>
+                            <div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-6"><span class="image fit"><a href="https://www.visitcheshire.com/things-to-do/chester-zoo-p30061"><img src="images/labelled_zoo_2.png" alt="" /></a></span></div>
+									<div class="col-6"><span class="image fit"><a href="https://www.history.com/news/who-invented-the-toothbrush"><img src="images/labelled_toothbrush.png" alt="" /></a></span></div>
+								</div>
+							</div>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-6"><span class="image fit"><a href="https://www.brake.org.uk/get-involved/take-action/mybrake/knowledge-centre/uk-road-safety"><img src="images/labelled_road_4.png" alt="" /></a></span></div>
+									<div class="col-6"><span class="image fit"><a href="https://news.leeds.gov.uk/news/new-road-safety-strategy-aims-to-eliminate-deaths-and-serious-injuries-on-leeds-roads"><img src="images/labelled_road_2.png" alt="" /></a></span></div>
+								</div>
+							</div>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-6"><span class="image fit"><a href="https://www.architecturaldigest.com/story/small-kitchen-design-ideas"><img src="images/labelled_kitchen_2.png" alt="" /></a></span></div>
+									<div class="col-6"><span class="image fit"><a href="https://www.westelm.co.uk/mid-century-pop-up-storage-coffee-table-h1903"><img src="images/labelled_coffee_table_2.png" alt="" /></a></span></div>
+								</div>
+							</div>
+							There were instances where the model was unable to detect all of the objects because:
+							<ul>
+								<li>The model was <b>not trained to recognise every category of object</b> in the image if they were not present within the COCO dataset.</li>
+								<li>The <b>limitations of the YOLOv3 model</b> itself in terms of its object classification and localisation methods.</li>
+							</ul>
+							<p>Simply adding more images to increase the number of categories in the dataset would allow the model to detect a larger variety of objects but to improve detection accuracy and speed, the architecture of the neural network would require modification. This has been achieved in later versions of the YOLO model (<a href="https://www.datacamp.com/blog/yolo-object-detection-explained">see article</a>) and would, therefore, yield superior results in an object detection system.</p>
+							<!-- <p>There were instances where the model was unable to detect all objects, partly because the model was not trained to recognise every category of object in the image as well as the limitations of the YOLOv3 model itself in terms of its object classification and localisation methods. Simply adding more images to increase the number of categories in the dataset would allow the model to detect a larger variety of objects but to improve detection accuracy and speed, the architecture of the neural network would require modification (<a href="">see article</a>).</p> -->
+							<!-- <p>There were instances where the model was unable to detect all objects, partly because the model was not trained to recognise every category of object in the image and partly due to a failure to identify the relevant features of the objects it should have been able to classify. In either case, the accuracy of the model could be improved by training with more diverse types of images of objects, which should allow the neural network to recognise more objects in various orientations and visibility conditions.</p> -->
+                            <!-- Lists -->
+                            <h2>Resources</h2>
+                            <div class="row">
+                                <div class="col-6 col-12-small">
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>TensorFlow Library</li>
+										<li><a href="https://keras.io/api/datasets/fashion_mnist/#fashion-mnist-dataset-an-alternative-to-mnist">Fashion MNIST dataset</a></li>
+										<li>OpenCV Library</li>
+										<li><a href="https://pjreddie.com/darknet/yolo/">YOLOv3 Object Detection Model</a></li>
+										<li><a href="https://cocodataset.org/#home">Microsoft COCO dataset</a></li>
+									</ul>
+
+                                </div>
+                            
+                            </div>
+                        </section>
+					</div>
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Hussain Siddiquey</li><li>Project Portfolio</li><li>Original Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
