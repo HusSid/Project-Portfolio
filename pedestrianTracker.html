@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Pedestrian & Car Tracker</title>
+		<title>Pedestrian & Car Detection</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -15,7 +15,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Pedestrian & Car Tracker</a>
+						<a href="index.html" class="logo">Computer Vision</a>
 					</header>
 
 				<!-- Main -->
@@ -23,7 +23,7 @@
 
 						<!-- Post -->
                         <section class="post">
-							<h2>Computer Vision</h2>
+							<h2>Pedestrian & Car Detection</h2>
 							
                             <!-- Text stuff -->
 							
@@ -42,7 +42,77 @@
 								<li>The classifier, which struggles to identify every subject due to <b>inherent limitations of the model.</b></li>
 								<li>Visual limitations such as <b>lighting and image resolution.</b></li>
 							</ul> 
-
+							<h2>Face Detection</h2>
+							<p>Similarly, using another <a href="https://raw.githubusercontent.com/kipr/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml">pre-trained classifier</a>, faces can be detected from both images and videos.
+							As shown below, the classifier is successful in identifying individual faces and in clear group photos.</p>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4"><span class="image fit"><a href=""><img src="images/face_detection_4.jpg" alt="" /></a></span></div>
+									<div class="col-4"><span class="image fit"><a href="https://www.vulture.com/2020/08/the-defiant-career-of-chadwick-boseman-a-hollywood-king.html"><img src="images/face_detection_8.jpg" alt="" /></a></span></div>
+									<div class="col-4"><span class="image fit"><a href="https://www.vip.de/cms/chris-evans-kehrt-er-als-captain-america-zurueck-4685394.html"><img src="images/face_detection_9.jpg" alt="" /></a></span></div>
+								</div>
+							</div>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-6"><span class="image fit"><a href="https://www.istockphoto.com/photos/happy-group-of-people"><img src="images/face_detection_3.jpg" alt="" /></a></span></div>
+									<div class="col-6"><span class="image fit"><a href="https://www.pexels.com/photo/people-taking-group-picture-3184398/"><img src="images/face_detection_7.jpg" alt="" /></a></span></div>
+								</div>
+							</div>
+							<p>The classifier does struggle, however, in group photos where the faces are not directly facing the camera and can miss some faces.</p>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-6"><span class="image fit"><a href="https://www.crossreach.org.uk/our-locations/hive-health-in-the-valley-enterprise"><img src="images/face_detection_2.jpg" alt="" /></a></span></div>
+									<div class="col-6"><span class="image fit"><a href="https://www.cdc.gov/tobacco/campaign/tips/groups/index.html"><img src="images/face_detection_5.jpg" alt="" /></a></span></div>
+								</div>
+							</div>
+							<p>Model accuracy can be improved to a certain extent by using images of faces in different positions, lighting and even just portions of during training so that the classifier can still recognise the relevant features of a face even when the face is not explicitly visible.</p>
+							<h2>Smile Detection</h2>
+							<p>Another <a href=#>pre-trained classifier</a> was used to detect if someone was smiling in addition to the face detection methods shown previously.</p>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-6"><span class="image fit"><a href="https://www.forbes.com/profile/stephen-curry/"><img src="images/Labelled_stephen_curry.png" alt="" /></a></span></div>
+									<div class="col-6"><span class="image fit"><a href="https://pbs.twimg.com/media/FQRQ7xzVIAI9pKs?format=jpg&name=large"><img src="images/labelled_klay_thompson_2.png" alt="" /></a></span></div>
+								</div>
+							</div>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-6"><span class="image fit"><a href="https://people.com/sports/lebron-james-thinks-kyrie-irving-should-play-again-antisemitic-film/"><img src="images/Labelled_lebron_james.png" alt="" /></a></span></div>
+									<div class="col-6"><span class="image fit"><a href="https://people.com/parents/russell-westbrook-opens-up-life-dad-of-three/"><img src="images/labelled_russell_westbook.png" alt="" /></a></span></div>
+								</div>
+							</div>
+							<p>In many cases, this method was able to identify faces and recognise if that face is smiling but it also suffers from similar limitations as the other classifiers which reduces its accuracy.</p>
+							<p>Furthermore, the classifier searched for smiles within the bounding box of the face which means that the accuracy of the face detection classifier was another limiting factor. If, instead, the classifier explored the entire image for a smile, more smiles might be detected but it could also lead to results like the image below.</p>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><a href="https://edition.cnn.com/2022/10/27/sport/golden-state-warriors-most-valuable-nba-franchise-spt-intl/index.html"><img src="images/labelled_golden_state_warriors.png" alt="" /></a></span></div>
+								</div>
+							</div>
+							<p>Training the neural network with lots of different types of smiles under various visibility conditions could help the classifier better distinguish between a person smiling and other similar shapes up to a certain level of precision, beyond which the accuracy of the classification method becomes a limiting factor.</p>
+							<h2>Face Recognition</h2>
+							<p>A <a href="https://github.com/ageitgey/face_recognition">face recognition API</a> was used to recognise individual faces. This method uses a deep convolutional neural network to generate measurements that describe a person's face which can then be used to differentiate between different people. Using a reference image for a person, subsequent images can be compared and assigned a score based on how closely
+							the two images match.</p>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4"><span class="image fit"><a href="https://www.premierleague.com/players/2522/player/overview"><img src="images/Reference_ronaldo.png" alt="" /></a><p style="text-align: center;"><b>Reference</b></p></span></div>
+									<div class="col-4"><span class="image fit"><a href="https://www.sportscasting.com/cristiano-ronaldo-may-just-told-world-ending-1-billion-soccer-career-with-a-cryptic-instagram-post/"><img src="images/Test_ronaldo_1.jpg" alt="" /></a><p style="text-align: center;"><b>Match: True, Difference: 0.564</b></p></span></div>
+									<div class="col-4"><span class="image fit"><a href="https://theathletic.com/3714026/2022/10/21/ronaldo-united-news/"><img src="images/Test_ronaldo_2.jpg" alt="" /></a><p style="text-align: center;"><b>Match: True, Difference: 0.537</b></p></span></div>
+								</div>
+							</div>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4"><span class="image fit"><a href="https://players.fcbarcelona.com/en/player/548-messi-lionel-andres-messi-cuccitini"><img src="images/Reference_messi.jpg" alt="" /></a><p style="text-align: center;"><b>Reference</b></p></span></div>
+									<div class="col-4"><span class="image fit"><a href="https://superstarsbio.com/bios/lionel-messi/"><img src="images/Test_messi_1.jpg" alt="" /></a><p style="text-align: center;"><b>Match: True, Difference: 0.526</b></p></span></div>
+									<div class="col-4"><span class="image fit"><a href="https://www.eurosport.com/football/liga/2021-2022/transfer-news-where-does-lionel-messi-go-now-after-latest-bombshell-what-does-this-mean-for-barcelon_sto8476870/story.shtml"><img src="images/Test_messi_2.jpg" alt="" /></a><p style="text-align: center;"><b>Match: True, Difference: 0.523</b></p></span></div>
+								</div>
+							</div>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4"><span class="image fit"><a href="https://en.wikipedia.org/wiki/Neymar"><img src="images/Reference_neymar.jpg" alt="" /></a><p style="text-align: center;"><b>Reference</b></p></span></div>
+									<div class="col-4"><span class="image fit"><a href="https://thesefootballtimes.co/2019/07/31/how-thiago-silva-overcame-tuberculosis-and-a-year-out-to-become-one-of-the-worlds-best-defenders/"><img src="images/Test_thiago.jpg" alt="" /></a><p style="text-align: center;"><b>Match: False, Difference: 0.751</b></p></span></div>
+									<div class="col-4"><span class="image fit"><a href="https://www.foottheball.com/players-in-focus/marcelo-real-madrid-la-liga/"><img src="images/Test_marcelo.jpg" alt="" /></a><p style="text-align: center;"><b>Match: False, Difference: 0.652</b></p></span></div>
+								</div>
+							</div>
+							<p>As shown in the images above, this method was able to accurately distinguish between different people despite differences in position or facial expression and would, hence, be useful in surveillance systems where the identity of individuals on the premises may need to be monitored.</p>
 
                             <!-- Lists -->
                             <h2>Resources</h2>
@@ -51,7 +121,8 @@
                                     <ul>
                                         <li>Python</li>
 										<li>OpenCV Library</li>
-                                    </ul>
+										<li><a href="https://github.com/ageitgey/face_recognition">Face Recognition API</a></li>
+									</ul>
 
                                 </div>
                             
