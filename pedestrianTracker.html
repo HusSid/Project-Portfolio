@@ -27,7 +27,7 @@
 							
                             <!-- Text stuff -->
 							
-                            <p>To track pedestrians and cars, certain visual features can be identified which distinguish them from their surroundings. Using a pre-trained classifier for <a href="https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_fullbody.xml">pedestrians</a> and <a href="https://raw.githubusercontent.com/andrewssobral/vehicle_detection_haarcascades/master/cars.xml">cars</a>, they can both be detected in real-time from a <a href = 'https://www.youtube.com/watch?v=WriuvU1rXkc&t=0s'>video feed</a>.</p>
+                            <p>To track pedestrians and cars, certain <a href="https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html">visual features</a> can be identified which distinguish them from their surroundings. Using a pre-trained classifier for <a href="https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_fullbody.xml">pedestrians</a> and <a href="https://github.com/andrewssobral/vehicle_detection_haarcascades/blob/master/cars.xml">cars</a>, they can both be detected in real-time from a <a href = 'https://www.youtube.com/watch?v=WriuvU1rXkc&t=0s'>video feed</a>.</p>
 							
                             <!-- Image -->
                             
@@ -43,7 +43,7 @@
 								<li>Visual limitations such as <b>lighting and image resolution.</b></li>
 							</ul> 
 							<h2>Face Detection</h2>
-							<p>Similarly, using another <a href="https://raw.githubusercontent.com/kipr/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml">pre-trained classifier</a>, faces can be detected from both images and videos.
+							<p>Similarly, using another <a href="https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml">pre-trained classifier</a>, faces can be detected from both images and videos.
 							As shown below, the classifier is successful in identifying individual faces and in clear group photos.</p>
 							<div class="box alt">
 								<div class="row gtr-50 gtr-uniform">
@@ -65,9 +65,9 @@
 									<div class="col-6"><span class="image fit"><a href="https://www.cdc.gov/tobacco/campaign/tips/groups/index.html"><img src="images/face_detection_5.jpg" alt="" /></a></span></div>
 								</div>
 							</div>
-							<p>Model accuracy can be improved to a certain extent by using images of faces in different positions, lighting and even just portions of during training so that the classifier can still recognise the relevant features of a face even when the face is not explicitly visible.</p>
+							<p>Model accuracy can be improved to a certain extent by using images of faces in different positions, lighting as well as partial images during training so that the classifier can still recognise the relevant features of a face even when the face is not explicitly visible.</p>
 							<h2>Smile Detection</h2>
-							<p>Another <a href=#>pre-trained classifier</a> was used to detect if someone was smiling in addition to the face detection methods shown previously.</p>
+							<p>Another <a href="https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_smile.xml">pre-trained classifier</a> was used to detect if someone was smiling in addition to the face detection methods shown previously.</p>
 							<div class="box alt">
 								<div class="row gtr-50 gtr-uniform">
 									<div class="col-6"><span class="image fit"><a href="https://www.forbes.com/profile/stephen-curry/"><img src="images/Labelled_stephen_curry.png" alt="" /></a></span></div>
@@ -87,7 +87,7 @@
 									<div class="col-12"><span class="image fit"><a href="https://edition.cnn.com/2022/10/27/sport/golden-state-warriors-most-valuable-nba-franchise-spt-intl/index.html"><img src="images/labelled_golden_state_warriors.png" alt="" /></a></span></div>
 								</div>
 							</div>
-							<p>Training the neural network with lots of different types of smiles under various visibility conditions could help the classifier better distinguish between a person smiling and other similar shapes up to a certain level of precision, beyond which the accuracy of the classification method becomes a limiting factor.</p>
+							<p>Training the neural network with lots of different types of smiles under various visibility conditions could help the classifier better distinguish between a person smiling and other similar shapes up to a certain level of precision, beyond which the accuracy of the classification method itself becomes a limiting factor.</p>
 							<h2>Face Recognition</h2>
 							<p>A <a href="https://github.com/ageitgey/face_recognition">face recognition API</a> was used to recognise individual faces. This method uses a deep convolutional neural network to generate measurements that describe a person's face which can then be used to differentiate between different people. Using a reference image for a person, subsequent images can be compared and assigned a score based on how closely
 							the two images match.</p>
@@ -112,7 +112,7 @@
 									<div class="col-4"><span class="image fit"><a href="https://www.foottheball.com/players-in-focus/marcelo-real-madrid-la-liga/"><img src="images/Test_marcelo.jpg" alt="" /></a><p style="text-align: center;"><b>Match: False, Difference: 0.652</b></p></span></div>
 								</div>
 							</div>
-							<p>As shown in the images above, this method was able to accurately distinguish between different people despite differences in position or facial expression and would, hence, be useful in surveillance systems where the identity of individuals on the premises may need to be monitored.</p>
+							<p>While this method may not be perfect, it was able to accurately distinguish between different people despite differences in position or facial expression, as shown in the images above, and would, hence, be useful in surveillance systems where the identity of individuals on the premises may need to be monitored.</p>
 
                             <!-- Lists -->
                             <h2>Resources</h2>
@@ -121,6 +121,10 @@
                                     <ul>
                                         <li>Python</li>
 										<li>OpenCV Library</li>
+										<li><a href="https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_fullbody.xml">Pedestrian Classifier</a></li>
+										<li><a href="https://github.com/andrewssobral/vehicle_detection_haarcascades/blob/master/cars.xml">Car Classifier</a></li>
+										<li><a href="https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml">Face Classifier</a></li>
+										<li><a href="https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_smile.xml">Smile Classifier</a></li>
 										<li><a href="https://github.com/ageitgey/face_recognition">Face Recognition API</a></li>
 									</ul>
 
