@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Stock Price Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Machine Learning</a>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+                        <section class="post">
+							 <!-- Text -->
+                            <h2>Stock Price Prediction</h2>
+							<p>A long-short term memory (LSTM) artificial recurrent neural network was used to predict the closing stock price of Apple Inc. based on the closing price of the previous 60 days.</p>
+                            <p><a href="https://finance.yahoo.com/quote/AAPL/history?p=AAPL">Data from 2012 to 2022</a> was used to train and test the neural network, with the majority (80%) used for training. The results are shown below.</p>
+                            
+							<!-- Image -->
+							<div class="box alt">
+								<div style="text-align: center;">
+									<img width="700" src="images/stockPricePredictionImage6.png">
+								</div>
+							</div>
+                            <p>The neural network was able to predict the closing prices to a reasonable accuracy throughout 2021 and 2022 with a root-mean-squared (RMS) error of 1.17 USD or average percentage error of -0.78%.</p>
+                            <div class="box alt">
+								<div style="text-align: center;">
+									<img width="700" src="images/stockPricePredictionImage7.png">
+								</div>
+							</div>
+                            <p>Testing the model on the 18th October outputs a prediction of 141.55 USD compared to the actual price of 143.75 USD - a difference of 1.5%. Closer inspection shows the discrepancies between the predicted and actual prices more clearly and how the model typically underestimates closing prices, indicating that further refinement is required to improve the accuracy of the model.</p>
+							
+                            <!-- Lists -->
+                            <h2>Resources</h2>
+                            <div class="row">
+                                <div class="col-6 col-12-small">
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>Tensorflow Library</li>
+										<li>Pandas Library</li>
+										<li>Juptyer Notebook</li>
+										<li><a href="https://finance.yahoo.com/quote/AAPL/history?p=AAPL">Stock Price Data</a></li>
+                                    </ul>
+
+                                </div>
+                            
+                            </div>
+                        </section>
+					</div>
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Hussain Siddiquey</li><li>Project Portfolio</li><li>Original Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
