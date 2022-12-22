@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Flappy Bird AI</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">NEAT Algorithm</a>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+                        <section class="post">
+                            <h2>Flappy Bird AI</h2>
+                             <!-- Text stuff -->
+							<p>The neuroevolution of augmenting topologies (NEAT) algorithm was used to train an artificial neural network based on the principles of natural selection to play Flappy Bird.</p>
+                            <p>By defining a fitness function that evaluates the performance of the AI based on its score and survival time, the best individuals of each generation were selected as a basis for the next generation to improve upon.</p>
+                            <p>The GIF below shows how the network was able to play the game.</p>
+                            <!-- Image -->
+                            <div class="box alt">
+								<div style="text-align: center;">
+									<img width="400" src="images/FlappyBirdGif3.gif">
+								</div>
+							</div>
+                            <p>The neural network was able to play the game successfully with no mistakes within only two generations. To increase the difficulty and further challenge the AI, the speed was doubled to test how quickly the network could respond (GIF below).</p>
+                            <div class="box alt">
+								<div style="text-align: center;">
+									<img width="400" src="images/FlappyBirdGif4.gif">
+								</div>
+							</div>
+                            <p>At a higher speed, the network was not able to reach as high of a score with an average of 73. To improve performance, the network was allowed to train for longer by increasing the fitness threshold of the NEAT algorithm ten-fold, which resulted in an <b>increase of the average score to 160.</b></p>
+							<div class="box alt">
+								<div style="text-align: center;">
+									<img width="800" src="images/FlappyBird_all_fitness_values.png">
+								</div>
+							</div>
+                            <p>Shown above is the performance of every bird in each generation for a single test run. From this graph, it is clear that subsequent generations typically performed better at the game than their predecessors. Therefore, further training would likely allow the network to continue improving, up to a certain point.</p>
+                            
+                            <div class="box alt">
+                                <div class="row gtr-50 gtr-uniform">
+                                    <div class="col-6"><span class="image fit"><img width="400" src="images/FlappyBird_max_fitness_values_3.png" alt="" /></span></div>
+                                    <div class="col-6"><span class="image fit"><img width="400" src="images/FlappyBird_average_fitness_values_3.png" alt="" /></span></div> 
+                                </div>
+                            </div>					
+                            <p>The graphs above also show that both the maximum and average fitness increased with every generation. While this may not always be the case as a certain degree of stochasticity is present in the process, the overall trend suggests <b>greater performance as each generation learns and improves</b> from the previous generations.</p>
+                            <!-- Lists -->
+                            <h2>Resources</h2>
+                            <div class="row">
+                                <div class="col-6 col-12-small">
+                                    <ul>
+                                        <li>Python</li>
+										<li>Pygame Library</li>
+										<li>NEAT Algorithm</li>
+                                    </ul>
+
+                                </div>
+                            
+                            </div>
+                        </section>
+					</div>
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Hussain Siddiquey</li><li>Project Portfolio</li><li>Original Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
